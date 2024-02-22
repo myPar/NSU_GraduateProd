@@ -7,7 +7,7 @@
 1D_2L_chart/baseline/plots/
 1D_2L_chart/baseline/dataset/
 1D_2L_chart/baseline/saved_models/
-1D_2L_chart/baseline/.idea/
+*.idea/
 1D_2L_chart/program_module/torchlib_module/
 *.vscode/
 
