@@ -1,6 +1,5 @@
-from torch_lib import *
 import pandas as pd
-from torch_lib import *
+from tools.torch_lib import *
 from torch.utils.data import Dataset
 from torch.utils.data import DataLoader
 from sklearn.model_selection import train_test_split
