@@ -103,6 +103,9 @@ int main(int argc, const char* argv[]) {
     while (true) {
         getline(test_data_file, line);
 
+        if (test_data_file.eof()) {
+            break;
+        }
         // skip header:
         if (is_first) {
             is_first = false;

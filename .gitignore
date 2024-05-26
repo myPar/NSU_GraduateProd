@@ -7,6 +7,7 @@
 *.idea/
 *.vscode/
 *build/
+*__pycache__/
 1D_2L_chart/baseline/__pycache__/
 1D_2L_chart/baseline/plots/
 1D_2L_chart/baseline/dataset/
