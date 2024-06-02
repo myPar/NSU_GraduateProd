@@ -21,6 +21,7 @@ def main():
 
     for name in input_file_names:
         df = pd.concat([df, pd.read_csv(name)])
+    df = df.rename(columns={'lambda':'lambda1', 'rad_well':'r_well'})
 
     df = df[np.concatenate((inputs, outputs))]
     df.to_csv("test_data.csv", index=False)

@@ -12,6 +12,7 @@ namespace keras2cpp{
             case Sigmoid:
             case Tanh:
             case SoftMax:
+            case LeakyReLU:
                 return;
             }
             kassert(false);
@@ -29,6 +30,13 @@ namespace keras2cpp{
                 std::transform(in.begin(), in.end(), out.begin(), [](float x) {
                     if (x < 0.f)
                         return 0.f;
+                    return x;
+                });
+                break;
+            case LeakyReLU:
+                std::transform(in.begin(), in.end(), out.begin(), [](float x) {
+                    if (x < 0.f)
+                        return x * 0.01f;   // default alpha
                     return x;
                 });
                 break;

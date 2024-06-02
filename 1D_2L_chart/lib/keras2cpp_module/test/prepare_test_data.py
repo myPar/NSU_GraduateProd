@@ -3,7 +3,7 @@ import pandas as pd
 import sys
 import os
 
-inputs = np.array(['AO/d', 'lambda', 'ro_formation'])
+inputs = np.array(['AO/d', 'ro_formation', 'lambda'])
 outputs = np.array(['rok'])
 
 

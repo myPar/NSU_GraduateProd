@@ -10,6 +10,7 @@
 #include "layers/lstm.h"
 #include "layers/maxPooling2d.h"
 #include "layers/batchNormalization.h"
+#include "layers/leaky_relu.h"
 
 namespace keras2cpp {
     std::unique_ptr<BaseLayer> Model::make_layer(Stream& file) {
@@ -38,6 +39,8 @@ namespace keras2cpp {
                 return layers::Embedding::make(file);
             case BatchNormalization:
                 return layers::BatchNormalization::make(file);
+            case LeakyReLU:
+                return layers::LeakyReLU::make(file);
         }
         return nullptr;
     }

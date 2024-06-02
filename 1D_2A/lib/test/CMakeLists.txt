@@ -80,12 +80,39 @@ set(CMAKE_CXX_FLAGS_MINSIZEREL "${CMAKE_CXX_FLAGS_MINSIZEREL} \
 
 # project configuration
 
-project(1D_2A_test)
+# project(1D_2A_test)
 
-include_directories(1D_2A_test PRIVATE "./include")
+# include_directories(1D_2A_test PRIVATE "./include")
 
-add_executable(1D_2A_test "")
-target_sources(1D_2A_test PRIVATE
+# add_executable(1D_2A_test "")
+# target_sources(1D_2A_test PRIVATE
+#     keras2cpp/utils.cc
+#     keras2cpp/baseLayer.cc
+#     keras2cpp/layers/activation.cc
+#     keras2cpp/layers/conv1d.cc
+#     keras2cpp/layers/conv2d.cc
+#     keras2cpp/layers/dense.cc
+#     keras2cpp/layers/elu.cc
+#     keras2cpp/layers/leaky_relu.cpp
+#     keras2cpp/layers/embedding.cc
+#     keras2cpp/layers/flatten.cc
+#     keras2cpp/layers/lstm.cc
+#     keras2cpp/layers/locally1d.cc
+#     keras2cpp/layers/locally2d.cc
+#     keras2cpp/layers/maxPooling2d.cc
+#     keras2cpp/layers/batchNormalization.cc
+#     keras2cpp/model.cc
+#     keras2cpp/tensor.cc
+#     1D_2A/model_inference.cpp
+#     1D_2A_test.cpp
+# )
+
+project(1D_2A_benchmark)
+
+include_directories(1D_2A_benchmark PRIVATE "./include")
+
+add_executable(1D_2A_benchmark "")
+target_sources(1D_2A_benchmark PRIVATE
     keras2cpp/utils.cc
     keras2cpp/baseLayer.cc
     keras2cpp/layers/activation.cc
@@ -104,6 +131,5 @@ target_sources(1D_2A_test PRIVATE
     keras2cpp/model.cc
     keras2cpp/tensor.cc
     1D_2A/model_inference.cpp
-    1D_2A_test.cpp
+    test_inference_time.cpp
 )
-

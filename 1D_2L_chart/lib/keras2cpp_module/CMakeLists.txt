@@ -105,4 +105,3 @@ target_sources(1D_2L_chart PRIVATE
     1D_2L_chart/model_inference.cpp
     1D_2L_chart.cc
 )
-

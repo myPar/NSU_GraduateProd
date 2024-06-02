@@ -4,6 +4,7 @@
 #include <string>
 #include <sstream>
 #include <vector>
+#include <chrono>
 
 const int ERROR = 1;
 const int INPUTS_ATTR_COUNT = 4;
@@ -99,10 +100,13 @@ int main(int argc, const char* argv[]) {
     // parse input file and write predictions to output line by line:
     int line_pos = 0;
     bool is_first = true;
+    const auto start = std::chrono::steady_clock::now();
 
     while (true) {
         getline(test_data_file, line);
-
+        if (test_data_file.eof()) {
+            break;
+        }
         // skip header:
         if (is_first) {
             is_first = false;
@@ -124,6 +128,10 @@ int main(int argc, const char* argv[]) {
         write_line(output_file, predictions);
         line_pos++;
     }
+    int iterations_count = line_pos + 1;
+    const auto end = std::chrono::steady_clock::now();
+    const std::chrono::duration<double> diff = end - start;
+    cout << "average predict time=" << diff.count() / iterations_count;
 
     // close files:
     test_data_file.close();

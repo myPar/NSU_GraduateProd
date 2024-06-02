@@ -80,12 +80,40 @@ set(CMAKE_CXX_FLAGS_MINSIZEREL "${CMAKE_CXX_FLAGS_MINSIZEREL} \
 
 # project configuration
 
-project(pz_2a_test)
+# project(pz_2a_test)
 
-include_directories(pz_2a_test PRIVATE "./include")
+# include_directories(pz_2a_test PRIVATE "./include")
 
-add_executable(pz_2a_test "")
-target_sources(pz_2a_test PRIVATE
+# add_executable(pz_2a_test "")
+# target_sources(pz_2a_test PRIVATE
+#     keras2cpp/utils.cc
+#     keras2cpp/baseLayer.cc
+#     keras2cpp/layers/activation.cc
+#     keras2cpp/layers/conv1d.cc
+#     keras2cpp/layers/conv2d.cc
+#     keras2cpp/layers/dense.cc
+#     keras2cpp/layers/elu.cc
+#     keras2cpp/layers/leaky_relu.cpp
+#     keras2cpp/layers/embedding.cc
+#     keras2cpp/layers/flatten.cc
+#     keras2cpp/layers/lstm.cc
+#     keras2cpp/layers/locally1d.cc
+#     keras2cpp/layers/locally2d.cc
+#     keras2cpp/layers/maxPooling2d.cc
+#     keras2cpp/layers/batchNormalization.cc
+#     keras2cpp/model.cc
+#     keras2cpp/tensor.cc
+#     pz_2a/model_inference.cpp
+#     pz_2a_test.cpp
+# )
+
+# execution time benchmark project:
+project(pz_2a_benchmark)
+
+include_directories(pz_2a_benchmark PRIVATE "./include")
+
+add_executable(pz_2a_benchmark "")
+target_sources(pz_2a_benchmark PRIVATE
     keras2cpp/utils.cc
     keras2cpp/baseLayer.cc
     keras2cpp/layers/activation.cc
@@ -104,6 +132,6 @@ target_sources(pz_2a_test PRIVATE
     keras2cpp/model.cc
     keras2cpp/tensor.cc
     pz_2a/model_inference.cpp
-    pz_2a_test.cpp
+    test_inference_time.cpp
 )
 

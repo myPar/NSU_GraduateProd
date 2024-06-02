@@ -15,6 +15,7 @@ namespace keras2cpp {
             LSTM = 10,
             Embedding = 11,
             BatchNormalization = 12,
+            LeakyReLU = 13
         };
         std::vector<std::unique_ptr<BaseLayer>> layers_;
         

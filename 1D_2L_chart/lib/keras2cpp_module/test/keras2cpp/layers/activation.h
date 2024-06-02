@@ -12,7 +12,8 @@ namespace keras2cpp{
                 Sigmoid = 6,
                 Tanh = 7,
                 HardSigmoid = 8,
-                SoftMax = 9
+                SoftMax = 9,
+                LeakyReLU = 10  // same as an index in ACTIVATIONS tuple (see keras2cpp.py)
             };
             _Type type_ {Linear};
         
